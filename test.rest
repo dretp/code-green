@@ -1,4 +1,6 @@
 ###
-http://localhost:3000/account
+GET http://localhost:3000/account/friends
+
+ 
 
 
