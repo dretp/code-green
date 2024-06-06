@@ -197,3 +197,4 @@ Temporary Items
 
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,visualstudiocode,webstorm+all,macos
+/node_modules
