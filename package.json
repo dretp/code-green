@@ -10,9 +10,12 @@
   "author": "Dre Price & emsite Soultions",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/storage": "^7.11.1",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "firebase": "^10.12.1",
-    "firebase-admin": "^12.1.1"
+    "firebase-admin": "^12.1.1",
+    "pg": "^8.11.5",
+    "postgres-pool": "^8.1.6"
   }
 }

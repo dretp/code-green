@@ -25,6 +25,14 @@ router.get('/friends', async (req, res) => {
 })
 
 
+router.post('/data', async function (req, res) {
+
+    const post = await svc.testInsert(req.body.id, req.body.name);
+
+   res.status(200).send(post)
+})
+
+
 
 router.post('/test', async (req, res) => {
 
