@@ -15,13 +15,20 @@ router.get('/',  async (req,res) =>
 
 
 router.get('/friends', async (req, res) => {
-    const peopleRef = db.collection('people').doc('associates')
-    const doc = await peopleRef.get()
-    if (!doc.exists) {
-        return res.sendStatus(400)
-    }
 
-    res.status(200).send(doc.data())
+    try {
+        const peopleRef = db.collection('people').doc('associates')
+        const doc = await peopleRef.get()
+        if (!doc.exists) {
+            return res.sendStatus(400)
+        }
+
+        res.status(200).send(doc.data())    
+    } catch (error) {
+        console.log(error);
+        res.status(400).send("Unable to retrieve data");
+    }
+    
 })
 
 
