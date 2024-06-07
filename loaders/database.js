@@ -13,12 +13,12 @@ const client = new Client({
 
 async function connection(){
 
-    const client = new Client();
-    await client.connect();
-    const res = await client.query('SELECT node_name FROM spock.node');
-    const node_names = res.rows.map((row) => row.node_name);
-    await client.end();
-    console.log(node_names);
+    // const client = new Client();
+    // await client.connect();
+    // const res = await client.query('SELECT node_name FROM spock.node');
+    // const node_names = res.rows.map((row) => row.node_name);
+    // await client.end();
+    // console.log(node_names);
 }
 
 connection()
