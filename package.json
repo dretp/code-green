@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Dre Price & emsite Soultions",
+  "author": "Dre Price & emsite Solutions",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/storage": "^7.11.1",
