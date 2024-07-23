@@ -7,9 +7,6 @@ const svc = require('../services/test-service');
 router.get('/',  async (req,res) =>
 {
     const resp = await svc.testService();
-
-
-
     res.send(resp);
 });
 
@@ -44,21 +41,10 @@ router.post('/data', async function (req, res) {
 router.post('/test', async (req, res) => {
 
 
-
-    const peopleRef = db.collection('people').doc('associates')
-
-
-        const docData = {
-            "name": req.body.name,
-            "status": req.body.status,
-        }
+    const post = await svc.firebaseTest(req.body.name,req.body.status);
 
 
-
-        peopleRef.set({docData})
-
-    // friends[name] = status
-    res.status(200);
+    res.status(200).send(post);
 });
 
 

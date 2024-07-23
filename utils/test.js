@@ -1,15 +1,22 @@
 const db = require('../firebase').db;
 
-const post = require('../loaders/database');
+//const post = require('../loaders/database');
 
 exports.retriveTest = async () => {
    const data = await  test();
-
     return data;
 
+}
 
+exports.firebasePost = async(name, status) =>{
+
+    const data = await postRequest(name,status)
+    return data;
 
 }
+
+
+
 
 // private function
 
@@ -20,13 +27,16 @@ const doc = await freinds.get();
 return doc;
 }
 
-exports.data = async function (id,name) {
-    const params = [id,name]
-    const q = `INSERT INTO test(id,name) VALUES ($1,$2)`;
+async function postRequest(name, status){
 
-    const data = await post.query(q,params);
-
-return data;
+    const peopleRef = db.collection('people').doc('associates')
 
 
+        const docData = {
+            "name": name,
+            "status": status
+        }
+
+        
+       return  peopleRef.set({docData})
 }
