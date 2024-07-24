@@ -17,7 +17,7 @@ router.post('/spending', async (req,res) =>{
 
     const spending = req.body.spending;
 
-    const resp = await svc.sepndingBudget(spending)
+    const resp = await svc.spendingBudget(spending);
 
     res.status(200).send(resp);
 })

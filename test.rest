@@ -2,5 +2,10 @@
 GET http://localhost:3000/account/friends
 
  
+###
+POST http://localhost:3000/expense/spending
+content-type: application/json
 
-
+{
+    "spending": 11000
+}
